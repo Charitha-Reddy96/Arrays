@@ -1,0 +1,10 @@
+import numpy as np
+def rotate(nums, k):
+      k = k%len(nums)
+      nums[:] = reversed(nums[:])
+      nums[:k] = reversed(nums[:k])
+      nums[k:] = reversed(nums[k:])
+        return nums
+nums = np.array(input().split(","))
+k = int(input("Enter No.of Elements to Rotate"))
+rotate(nums,k)
